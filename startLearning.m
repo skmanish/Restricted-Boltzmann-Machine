@@ -10,3 +10,4 @@ data = fullfile(parentDir,'data');
 modules = fullfile(parentDir,'modules');
 save(fullfile(parentDir,'.config.mat'));
 
+grid_search

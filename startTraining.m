@@ -10,8 +10,8 @@ data = fullfile(parentDir,'data');
 modules = fullfile(parentDir,'modules');
 save(fullfile(parentDir,'.config.mat'));
 
-% Change this to 1 for using saved model
-useSavedModel = 1;
+% Change this to 1 for using saved model, 0 for learning from scratch
+useSavedModel = 0;
 silhoutte
 
 

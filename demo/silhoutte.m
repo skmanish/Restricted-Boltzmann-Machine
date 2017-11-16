@@ -1,4 +1,4 @@
-clear all;
+
 fprintf('\nHere we train an RBM with Binary inputs (Silhouette datastet).\n');
 
 % LOAD DATASET
@@ -41,12 +41,14 @@ arch.opts = {'verbose', 1, ...
 		'displayEvery', 20};
 %  		'visFun', @visBinaryRBMLearning};
 
-% INITIALIZE RBM
-r = rbm(arch);
-
-% TRAIN THE RBM
-r = r.train(train_data,single(train_labels));
-
+if(useSavedModel==0)
+        % INITIALIZE RBM
+        r = rbm(arch);
+        % TRAIN THE RBM
+        r = r.train(train_data,single(train_labels));
+    else 
+        load('r')
+end
 [~,classErr,misClass] = r.classify(test_data, single(test_labels));
 
 

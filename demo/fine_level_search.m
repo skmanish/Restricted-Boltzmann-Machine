@@ -11,7 +11,7 @@ clear all;
 % save(fullfile(parentDir,'.config.mat'));
 
 N = 5;
-M = 5;
+M = 4;
 
 HiddenUnits = [400,700];
 learningRates = [0.05, 0.1];
@@ -44,7 +44,7 @@ clear temp1, temp2;
 
 leastError = 30.3445;
 
-for hyperParameterType = 7:7
+for hyperParameterType = 1:7
 for division = 1:(N+1)    
 for randomSample = 1:(M)   
     
